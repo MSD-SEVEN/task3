@@ -1,0 +1,10 @@
+---
+- hosts: devops
+  user: ansible
+  become: yes
+  connection: ssh
+  tasks:
+    - name:  create file
+      file:
+        path: "gg.txt"
+        state: touch
